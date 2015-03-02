@@ -1,8 +1,46 @@
 body{
+	margin:0;
+}
+
+.page{
+	width:100%;
+	height:100%;
+}
+
+#toolbox-page{
 	background:#66ccff;
+}
+
+#tut-page{
+	background:#d7c163;
+	display:none;
 }
 
 .page-title{
 	text-align:center;
 	text-transform:uppercase;
+}
+
+.toolbox{
+	padding:0;
+	text-align:center;
+	width:100%;
+	list-style-type:none;
+	background-repeat:no-repeat;
+}
+
+.toolbox-tool{
+	height:10em;
+}
+
+#brainwriting{
+	background-image:url("../img/brainwriting.jpg");
+	background-repeat:no-repeat;
+}
+
+#mind-map{
+	background-image:url("../img/mind-map.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
 }
