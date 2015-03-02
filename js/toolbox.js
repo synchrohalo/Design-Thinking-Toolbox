@@ -1,31 +1,33 @@
 var curPage = '#toolbox-page';
 var prevPage = '#toolbox-page';
 
+// Wait for device API libraries to load
+//
+function onLoad() {
+	document.addEventListener("deviceready", onDeviceReady, false);
+}
 
 $(document).ready(function() {
 	$('#mind-map').on({ 'click' : function(){ 
 		$( "#toolbox-page" ).hide();
-		$( "#tut-page" ).show("fast");
+		$( "#tut-page" ).show();
 		curPage = '#tut-page';
 		prevPage = '#toolbox-page';
 	} });
 });
 
-/*function showScreen(){
-      $(curPage).hide();
-      $(".screen").show();
-      $(document).on("backbutton", onBackButton);
-}*/
-
-function hideScreen(){
-      $(curPage).hide();
-      $(prevPage).show();
-      $(document).off("backbutton", onBackButton);
+// device APIs are available
+//
+function onDeviceReady() {
+	// Register the event listener
+	document.addEventListener("backbutton", onBackKeyDown, false);
 }
-
-function onBackButton(){
-      hideScreen();
-	  var temp = curPage;
-	  curPage = prevPage;
-	  prevPage = temp;
+	
+function onBackKeyDown() {
+	$(curPage).hide();
+	$(prevPage).show();
+	
+	var temp = curPage;
+	curPage = prevPage;
+	prevPage = curPage;
 }
