@@ -3,26 +3,40 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body onload="onLoad()">
+	<div id="menu-bar">
+		<h3 id="app-name">Design Thinking</h3>
+	</div>
+	
 	<div class="page" id="toolbox-page">
 		<h2 class="page-title">Toolbox</h2>
-		
-		<ul class="toolbox">
-			<a href="#"><li class="toolbox-tool" id="brainwriting">
-					<h4 class="toolbox-name">Brainwriting</h4>
-			</li></a>
-			<a href="#"><li class="toolbox-tool" id="mind-map">
-					<h4 class="toolbox-name">Mind Map</h4>
-			</li></a>
-		</ul>
+		<div class="page-content">
+			<ul class="toolbox">
+				<li class="toolbox-tool" class="picture" id="brainwriting">
+						<h4 class="toolbox-name">Brainwriting</h4>
+						<div class="tool-options">
+							<a href="#"><div class="tool-button">View</div></a>
+							<a href="#"><div class="tool-button">Use</div></a>
+						</div>
+				</li>
+				<li class="toolbox-tool" class="picture" id="mind-map">
+						<h4 class="toolbox-name">Mind Map</h4>
+						<div class="tool-options">
+							<a href="#"><div id="mind-map-tut" class="tool-button">View</div></a>
+							<a href="#"><div class="tool-button">Use</div></a>
+						</div>
+				</li>
+			</ul>
+		</div>
 	</div>
 	
 	<div class="page" id="tut-page">
 		<h2 class="page-title">Mind Map</h2>
-		<div class="tut-img"></div>
-		<p style="padding:5px;">Habeo munere primis at eam, cum alienum torquatos ea. Cum noluisse rationibus te, an quot aliquip mea, vim ut munere noster persecuti. Est magna rebum verterem te, eu posse democritum consequuntur sea, iusto mnesarchum has ad.</p>
-		<p class="right-arrow">&#8680;</p>
+		<div class="page-content">
+			<div class="tut-img" class="picture"></div>
+			<p class="tut-description">Habeo munere primis at eam, cum alienum torquatos ea. Cum noluisse rationibus te, an quot aliquip mea, vim ut munere noster persecuti. Est magna rebum verterem te, eu posse democritum consequuntur sea, iusto mnesarchum has ad.</p>
+		</div>
 	</div>
-	
+		<!--<div id="next-prev" class="arrow"><div id="left-arrow">&#8678;</div><div id="right-arrow">&#8680;</div></div>-->
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/toolbox.js"></script>
 </body>
